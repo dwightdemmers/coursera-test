@@ -11,10 +11,13 @@
         <h1>Expressions and Interpolation</h1>
         <div ng-controller="MsgController">
             {{ name }} has a message for you: <br>
-            {{ sayMessage() }}
+            Original: {{ sayMessage() }}<br>
+            Loves: {{ sayLovesMessage() }}<br>
+            Truth: {{ sayLovesMessage() | truth : 'healty' : 'cookie' }}<br>
+            Big truth: {{ sayLovesMessage() | truth : 'healty' : 'cookie' | uppercase }}
 
             <div>
-                <button ng-click="feedDwight()">Feed {{ name }}</button> 
+                <button ng-click="feedDwight()">Feed {{ name }}</button>
                 <br>
                 <img ng-src="images/yaakov_{{stateOfBeing}}.png">
             </div>
